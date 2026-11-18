@@ -1,30 +1,7 @@
-# dabarron.github.io
+# Academic website
 
-## Description
-This project is a simple web page built using HTML and styled with CSS. It demonstrates how to structure an HTML document and apply styling through an external CSS file.
+Static GitHub Pages site. Upload the **contents of this folder** (index.html, styles.css, assets/) to the root of daniebarron.github.io.
 
-## Features
-- Basic HTML structure (headings, paragraphs, etc.)
-- Inline, internal, and external CSS usage
-- Responsive and visually appealing design
+The CV is the user's original PDF, unchanged. The Tyndall presentation has deliberately not been included while a possible paper is being discussed. The Quantum Hall report has also been withheld pending correction of an informal line on its title page; the poster is included.
 
-## Files Included
-- `index.html` – The main HTML file
-- `styles.css` – The CSS stylesheet for styling the web page
-
-## How to Use
-1. Clone or download the repository.
-2. Open `index.html` in a web browser.
-3. Modify `styles.css` to experiment with different styles.
-
-## Technologies Used
-- HTML5
-- CSS3
-
-## Future Improvements
-- Add interactive elements with JavaScript
-- Improve responsiveness with media queries
-- Enhance styling with CSS frameworks like Bootstrap or Tailwind
-
-## Author
-Daniel Barron
+Contact: dabarron@tcd.ie.

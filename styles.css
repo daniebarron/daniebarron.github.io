@@ -1,78 +1,60 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
+:root {
+  --paper: #faf8f3;
+  --ink: #263337;
+  --green: #244f4e;
+  --green-soft: #e5efea;
+  --green-line: #a9c9bf;
+  --rust: #9c5c3d;
+  --sand: #f1e9dc;
+  --muted: #65716f;
+  --line: #d7dcd4;
 }
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Georgia, 'Times New Roman', serif; }
+.page { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
+a { color: #176d70; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--rust); }
+header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px 0 20px; border-bottom: 3px solid var(--green); font-family: Arial, Helvetica, sans-serif; }
+header .name { color: var(--green); font-size: 18px; font-weight: 700; text-decoration: none; }
+nav { display: flex; gap: 26px; flex-wrap: wrap; }
+nav a { color: var(--ink); font-size: 14px; text-decoration: none; }
+nav a:hover { color: var(--rust); text-decoration: underline; }
+main { padding-top: 34px; }
+section { margin-bottom: 58px; }
+h1, h2, h3 { font-family: Arial, Helvetica, sans-serif; color: var(--green); letter-spacing: -.025em; }
+h1, h2 { font-size: 24px; margin: 0 0 22px; }
+h3 { font-size: 17px; line-height: 1.4; margin: 5px 0 10px; }
+p { font-size: 16px; line-height: 1.74; margin: 0 0 16px; }
+/* A softly coloured introduction, rather than a large hero banner. */
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) 225px; gap: 40px; align-items: start; background: var(--green-soft); border-top: 4px solid var(--green-line); padding: 35px 38px 31px; }
+.intro h1 { margin-bottom: 19px; }
+.intro p:last-child { margin: 22px 0 0; font-size: 15px; }
+/* Tight head-and-shoulders crop using the existing portrait.jpg. */
+.portrait { display: block; width: 225px; height: 250px; object-fit: cover; object-position: 50% 17%; border: 5px solid #fffdf8; box-shadow: 0 3px 12px #183f3920; }
+#research h2 { border-bottom: 1px solid var(--green-line); padding-bottom: 15px; margin-bottom: 9px; }
+/* Research reads like an academic chronology, not a set of app cards. */
+article { padding: 24px 28px 20px; border-bottom: 1px solid var(--line); }
+article:nth-of-type(odd) { background: #edf2ec; }
+article:nth-of-type(even) { background: var(--sand); }
+article:first-of-type { border-top: 3px solid var(--green-line); }
+.meta { font: 13px/1.5 Arial, Helvetica, sans-serif; color: var(--rust); letter-spacing: .015em; }
+article p { font-size: 15.5px; line-height: 1.68; margin-bottom: 9px; }
+article .links { font: 14px/1.6 Arial, Helvetica, sans-serif; margin: 10px 0 0; }
+#other { background: var(--green-soft); padding: 30px 35px 25px; border-top: 3px solid var(--green-line); }
+#other h2 { margin-bottom: 12px; }
+#other p { margin-bottom: 0; }
+footer { border-top: 1px solid var(--line); padding: 22px 0 36px; color: var(--muted); font: 13px Arial, Helvetica, sans-serif; }
+@media (max-width: 760px) {
+  .page { padding: 0 22px; }
+  .intro { grid-template-columns: minmax(0, 1fr) 170px; gap: 24px; padding: 28px 26px; }
+  .portrait { width: 170px; height: 205px; }
 }
-
-header h1 {
-    margin: 0;
-}
-
-nav ul {
-    background: #444;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 20px;
-    display: inline-block;
-}
-
-nav ul li a:hover {
-    background: #555;
-}
-
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.research-item {
-    margin-bottom: 20px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-    color: #fff;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    .research-item {
-        margin-bottom: 20px;
-    }
+@media (max-width: 570px) {
+  header { flex-direction: column; align-items: flex-start; gap: 14px; }
+  nav { gap: 19px; }
+  .intro { grid-template-columns: 1fr; padding: 24px; }
+  .portrait { grid-row: 1; width: 185px; height: 205px; }
+  article { padding: 19px 18px; }
+  #other { padding: 24px; }
 }
